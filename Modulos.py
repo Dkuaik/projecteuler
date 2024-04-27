@@ -108,3 +108,15 @@ def properDivisors(n:int):
         if n%i==0:
             divisors.append(i)
     return divisors
+
+# esta funcion 
+
+def lexicographicPermutation(n:int) -> list:
+    n-=1
+    digits = [0,1,2,3,4,5,6,7,8,9]
+    permutation = []
+    for i in range(10):
+        index = n // factorial(9-i)
+        n = n % factorial(9-i)
+        permutation.append(digits.pop(index)) 
+    return permutation
