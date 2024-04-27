@@ -93,3 +93,11 @@ def collatzSequence (n:int):
         CS.append(n)
     # CS.append(n)
     return CS
+
+# Funcion que calcula el factorial de un numero
+def factorial(n: int) -> int:
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+    
