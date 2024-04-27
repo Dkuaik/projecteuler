@@ -1,3 +1,4 @@
+# este problema consiste en calcular la suma de los dígitos de 100!
 
 import Modulos as md
 

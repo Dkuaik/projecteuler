@@ -3,7 +3,7 @@
 # "three hundred and forty-two" y utiliza 23 letras. El objetivo es calcular la 
 # suma total de letras utilizadas para escribir todos los números en palabras del 1 al 1000.
 
-# Para resolver este problema, se puede utilizar la función `num2words` del módulo `inflect`
+# Para resolver este problema, se puede utilizar la función number_to_words de la libreria inflect
 
 import inflect
 p = inflect.engine()

@@ -101,3 +101,10 @@ def factorial(n: int) -> int:
     else:
         return n * factorial(n-1)
     
+# funcion que regresa los divisores propios de un numero
+def properDivisors(n:int):
+    divisors=[]
+    for i in range(1,n):
+        if n%i==0:
+            divisors.append(i)
+    return divisors
