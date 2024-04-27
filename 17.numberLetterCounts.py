@@ -5,7 +5,14 @@
 
 # Para resolver este problema, se puede utilizar la función `num2words` del módulo `inflect`
 
-import inspect as ins
-
-for n in range (1,10):
-    print(n,ins.num2words(n,lang='en'))
+import inflect
+p = inflect.engine()
+allWords=""
+for n in range (1,1001):
+    nWord=p.number_to_words(n)
+    newWord=nWord.replace(" ","")
+    newWord=newWord.replace("-","")
+    # print(newWord)
+    allWords=newWord+allWords
+print(allWords)
+print(len(allWords))
