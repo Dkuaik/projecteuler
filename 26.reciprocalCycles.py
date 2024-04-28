@@ -5,7 +5,8 @@
 # Por ejemplo, 1/3 = 0.3333... tiene un ciclo de longitud 1.
 # El objetivo del problema es encontrar el número menor a 1000 que tiene el ciclo 
 # decimal repetitivo más largo.
-
+import time
+begin=time.time()
 limit=1000
 
 for i in range(1,limit):
@@ -16,5 +17,8 @@ for i in range(1,limit):
         if j==i-1:
             print(i)
             break
+
+end=time.time()
+print("Tiempo de ejecución: ",end-begin)
 # Respuesta: 983 - O(n^2)
 # merge
