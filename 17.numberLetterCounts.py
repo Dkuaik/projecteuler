@@ -12,7 +12,7 @@ for n in range (1,1001):
     nWord=p.number_to_words(n)
     newWord=nWord.replace(" ","")
     newWord=newWord.replace("-","")
-    # print(newWord)
+    print(newWord)
     allWords=newWord+allWords
 print(allWords)
 print(len(allWords))

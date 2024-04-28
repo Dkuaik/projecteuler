@@ -2,6 +2,17 @@
 # Para dar solucion a los problemas de Euler
 import math
 
+#Funcion que genera el n-esimo numero de fibonacci
+def fibonacci (n:int) -> int:
+    if n==0:
+        return 0
+    if n==1:
+        return 1
+    a,b=0,1
+    for i in range (n-1):
+        a,b=b,a+b #aisnacion de los nuevos numeros de fibonacci
+    return b
+
 #Funcion de identificacion de primo
 def esPrimo ( n:int ) -> bool: 
     if n==2:

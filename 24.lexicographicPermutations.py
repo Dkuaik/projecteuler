@@ -8,7 +8,7 @@
 
 import Modulos as md
 
-n=1000000
+n=2504860
 permutation = md.lexicographicPermutation(n)
 print(permutation)
 
