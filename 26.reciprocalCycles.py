@@ -27,3 +27,4 @@ numbers.sort(reverse=True)
 print(numbers[0])
 end=time.time()
 print("Tiempo de ejecución: ",end-begin)
+# Respuesta: periodo de 982 con d-983
