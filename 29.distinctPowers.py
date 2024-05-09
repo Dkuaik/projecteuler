@@ -18,3 +18,5 @@ for a,b in [(a,b) for a in range(2,101) for b in range(2,101)]:
     potencias.add(a**b)
 
 print(len(potencias))
+
+# el resultado es 9183
