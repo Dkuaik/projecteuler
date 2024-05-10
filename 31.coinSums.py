@@ -16,9 +16,10 @@ maneras[0] = 1
 # Para cada tipo de moneda
 for moneda in monedas:
     # Para cada cantidad desde moneda hasta 200
-    for n in range(moneda, p+1):
-        # Añade el número de maneras de hacer n - moneda a maneras[n]
-        maneras[n] += maneras[n - moneda]
+    for n in range(moneda, p+1): #el resultado final no se puede tener hasta que se iteren todas las monedas y todos 
+        # los valores de n desde la moneda hasta 200 (desde la moneda pues para valores menores es imposible formar combinaciones) 
+        maneras[n] += maneras[n - moneda] # se suman las n - moneda, debido a que tomas la moneda en cuenstion y revisas
+        #la cantidad de formas para poder formar el resto de la cantidad n.
 
 print(maneras[7])  # Imprime el número de maneras de hacer 200p
 
