@@ -32,7 +32,6 @@ def esPrimo ( n:int ) -> bool:
 #funcion que genera el n-esimo primo 
 def generadorPrimos (n: int) -> int: #mejorar algoritmo
     i,j=1,1
-    
     while i<=n:
         j+=1        
         if esPrimo(j):
