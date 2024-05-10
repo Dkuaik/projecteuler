@@ -26,8 +26,8 @@ for i in range (11,100):
                 fracciones.append([int(i_str),int(j_str)])
 numerador=1
 denominador=1
-print(fracciones) #[[16, 64], [19, 95], [26, 65], [49, 98]]
-for i in fracciones:
+print(fracciones) 
+for i in fracciones: #multiplicando todas las fracciones
     numerador*=i[0]
     denominador*=i[1]
-print(numerador,denominador) #387296 38729600
+print(numerador,denominador) #8/800 -> 1/100  
