@@ -2,6 +2,16 @@
 # Para dar solucion a los problemas de Euler
 import math
 
+# Funcion para detectar palindromos
+
+def isPalindrome (n:str) -> bool:
+    n=str(n)
+    for i in range (1,int(len(n)/2)+1):
+        if n[i-1]!=n[-i]:
+            #print(f"las entradas {n[i-1]} y {n[-i]} son distintas")
+            return False
+    return True
+
 #Funcion que genera el n-esimo numero de fibonacci
 def fibonacci (n:int) -> int:
     if n==0:
@@ -27,7 +37,15 @@ def esPrimo ( n:int ) -> bool:
             continue
         if n%i==0:
             return False
-    return True      
+    return True  
+
+# Funcion para averiguar el siguiente primo dada una lsita de primos
+def nextPrime (p) -> int:
+    n=p[-1]+2
+    while True:
+        if esPrimo(n):
+            return n
+        n+=2
 
 #funcion que genera el n-esimo primo 
 def generadorPrimos (n: int) -> int: #mejorar algoritmo
@@ -60,7 +78,8 @@ def factors (n: int):
             factors.append([p,potencia])
         if n==1:
             return factors 
-        
+
+# fucni'on que descompone en primos con una lista de primos previamente calculada p
 def numFactors (n:int , p):
     np=[]
     for i in p:
@@ -130,3 +149,4 @@ def lexicographicPermutation(n:int) -> list:
         n = n % factorial(9-i)
         permutation.append(digits.pop(index)) 
     return permutation
+
