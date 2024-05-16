@@ -2,6 +2,20 @@
 # Para dar solucion a los problemas de Euler
 import math
 
+# Funcion para detectar numeros pandigitales
+def isPandigital (n:str,a,b) -> bool:
+    pantiDigit=str(n)
+    for i in range (a,b+1):
+        if str(i) in pantiDigit:
+            pantiDigit=pantiDigit.replace(str(i),'',1)
+        else:
+            return False
+    if pantiDigit=='':
+        return True
+    else:
+        return False
+
+
 # Funcion para detectar palindromos
 
 def isPalindrome (n:str) -> bool:
