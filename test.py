@@ -1,2 +1,4 @@
-print("Lugar de test")
-print("Fin de test")
+import Modulos as md
+
+a=md.lexicographicPermutation(3)
+print(a)

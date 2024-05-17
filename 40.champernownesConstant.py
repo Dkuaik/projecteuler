@@ -16,3 +16,4 @@ mult=1
 for i in d:
     mult*=i
 print(mult)
+# respuesta: 210
