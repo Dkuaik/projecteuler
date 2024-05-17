@@ -14,7 +14,7 @@ count=0
 triada=[]
 results=[]
 
-for p in range (840,1001):
+for p in range (1,1001):
     triada=[]
     count=0
     for a in range (1,p//2+1):
