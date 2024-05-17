@@ -16,3 +16,6 @@ for n in range (1,10):
             if primo:
                 maxPP=i
 print(maxPP)
+# esto esta hecho a la fuerza bruta, pero hay una forma mucho m'as efectiva
+# Se puede tomar el conjunto (1,2,..,n) y sacar todas sus permutaciones
+# Preguntar si alguno de esos numeros es primo, de esta forma los calculos se reducen mucho

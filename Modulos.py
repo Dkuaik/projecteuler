@@ -139,7 +139,7 @@ def collatzSequence (n:int):
 
 # Funcion que calcula el factorial de un numero
 def factorial(n: int) -> int:
-    if n == 0:
+    if n <= 0:
         return 1
     else:
         return n * factorial(n-1)
@@ -163,4 +163,23 @@ def lexicographicPermutation(n:int) -> list:
         n = n % factorial(9-i)
         permutation.append(digits.pop(index)) 
     return permutation
+
+# Esta funcion genera la n-esima permutacion de un conjunto de numeros
+def permutations(numbers):
+    if len(numbers) == 1:
+        return [numbers]
+    result = []
+    for i in range(len(numbers)):
+        rest = numbers[:i] + numbers[i+1:]
+        for p in permutations(rest):
+            result.append([numbers[i]] + p)
+    return result
+
+def nth_permutation(numbers, m):
+    # Genera todas las permutaciones
+    perms = permutations(numbers)
+    # Ordena las permutaciones
+    perms.sort()
+    # Devuelve la m-ésima permutación
+    return perms[m-1]
 
