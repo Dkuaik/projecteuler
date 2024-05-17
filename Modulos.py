@@ -72,7 +72,7 @@ def generadorPrimos (n: int) -> int: #mejorar algoritmo
 
 #Funcion que identifica si una tercia de numeros forman una terna pitagorica
 def isPhytagorean (a:int , b:int , c:int) -> bool:
-       if a**2+b**2==c**2:
+       if a**2+b**2==c**2 or b**2+c**2==a**2 or c**2+a**2==b**2: #esto para que el orden no importe
             return True
        else:
              return False
