@@ -13,3 +13,4 @@ for i in range(1,10):
             maxPP=permutacionNum
             # print(maxPP, " este es primo")
 print(maxPP)
+# Respuesta: 7652413
