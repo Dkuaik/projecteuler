@@ -12,7 +12,7 @@
 
 #Importacion de modulo personalizado 
 
-from Modulos import isPentagonal,nth_pentigonalNumber
+from Modulos import is_pentagonal,nth_pentagonal_number
 import itertools
 
 # Inicializacion de variables
@@ -23,19 +23,21 @@ pentagonal_n=0
 pentagonal_m=0
 diff=0
 # El objetivo es encontrar la diferencia minima entre los numeros pentagonales
-# para ello se va a iterar sobre los numeros penagonales, este lo tomamos como la diferencia y calculamos los numeros restantes.
+# para ello se va a iterar sobre los numeros penagonales, el primero lo declaramos como la suma ya qeu esto marca una cota superior para los demás pantigonales. 
+# luego se genera el numero pantigonal n, con n<sum_n así con las relaciones aritmeticas se generan los otros numeros
+# la prueba final es revisal que el conjunto de 4 numeros cumple que todos son pantigonales. 
+# la primera que pase la prueba es la respuesta, cualquier otro conjunto de numeros tendria una diferencia mayor.
 # De esta manera paramos cuando encontremos el primer conjuntos de numeros que cumplan la regla.
-# sin perdida de generalidad supongamos que n>m
 
 while not(diff):
     i+=1
-    pentagonal_sum=nth_pentigonalNumber(i)
+    pentagonal_sum=nth_pentagonal_number(i)
     for n in range(1,i):
-        pentagonal_n=nth_pentigonalNumber(n)
+        pentagonal_n=nth_pentagonal_number(n)
         pentagonal_m=pentagonal_sum-pentagonal_n
         pentagonal_diff=abs(pentagonal_n-pentagonal_m)
-        if isPentagonal(pentagonal_m) and isPentagonal(pentagonal_diff):
+        if is_pentagonal(pentagonal_m) and is_pentagonal(pentagonal_diff):
             diff=pentagonal_diff
             break
-print(diff)      
+print(diff) #respuesta 5482660
 

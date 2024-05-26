@@ -121,7 +121,7 @@ def numFactors (n:int , p):
 
 # funcion generadora de numeros triangulares
 
-def numTriangular (n:int) -> int:
+def nth_triangular_number (n:int) -> int:
     return int((n*(n+1))/2)
 
 #Crea el siguiente elemento de la sucesión partiendo del numero n
@@ -189,13 +189,26 @@ def nth_permutation(numbers, m):
     # Devuelve la m-ésima permutación
     return perms[m-1]
 # genera el n-simo numero pentagonal
-def nth_pentigonalNumber(n:int) -> int:
+def nth_pentagonal_number(n:int) -> int:
     return n*(3*n-1)/2
 
 # Evalua si un numero es pentagonal
-def isPentagonal(n:int) -> bool:
+def is_pentagonal(n:int) -> bool:
     if (1 + math.sqrt(1 + 24 * n)) % 6 == 0:
         return True
     return False
 
-# print(isPentagonal(145))
+def is_hexagonal(n:int) -> bool:
+    if (1+math.sqrt(1+8*n))%4==0:
+        return True
+    return False
+
+def nth_hexagonal_number(n:int) -> int:
+    return n*(2*n-1)    
+
+def is_triangular(n:int) -> bool:
+    if (math.sqrt(1+8*n)-1)%2==0:
+        return True
+    return False
+# for i in range(100):
+#     print(is_triangular(nth_hexagonal_number(i)))
