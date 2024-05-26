@@ -44,7 +44,9 @@ def fibonacci (n:int) -> int:
     return b
 
 #Funcion de identificacion de primo
-def isPrime ( n:int ) -> bool: 
+def is_prime ( n:int ) -> bool: 
+    if n<0:
+        return ValueError("Negative values are not allowed")
     if n==2:
          return True
     if n==1 or n== 0:
@@ -63,7 +65,7 @@ def isPrime ( n:int ) -> bool:
 def nextPrime (p) -> int:
     n=p[-1]+2
     while True:
-        if isPrime(n): #esto se depreca por la generacion con yield
+        if is_prime(n): #esto se depreca por la generacion con yield
             return n
         n+=2
 
@@ -72,7 +74,7 @@ def primesGenerator (n: int) -> int: #mejorar algoritmo
     i,j=1,1
     while i<=n:
         j+=1        # utilizar sentencia yield para trabajar con secuencias infinitas
-        if isPrime(j):
+        if is_prime(j):
             i+=1
     return j
 

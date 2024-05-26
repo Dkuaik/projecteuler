@@ -12,7 +12,7 @@ for n in range (1,10):
     for i in range (lim_inf,lim_sup):
         pentigonal=md.isPandigital(str(i),1,n-1)
         if pentigonal:
-            primo=md.isPrime(i)
+            primo=md.is_prime(i)
             if primo:
                 maxPP=i
 print(maxPP)

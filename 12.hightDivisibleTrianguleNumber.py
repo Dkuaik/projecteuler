@@ -10,7 +10,7 @@ while np<500:
     i+=1
     nt+=i
     np=1
-    if (md.isPrime(nt)):
+    if (md.is_prime(nt)):
         continue
     while (not (md.numFactors(nt,p))):
         # if (md.esPrimo(j)): p.append(j)
