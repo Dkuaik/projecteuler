@@ -10,11 +10,11 @@ while np<500:
     i+=1
     nt+=i
     np=1
-    if (md.esPrimo(nt)):
+    if (md.isPrime(nt)):
         continue
     while (not (md.numFactors(nt,p))):
         # if (md.esPrimo(j)): p.append(j)
-        p.append(md.generadorPrimos(j))
+        p.append(md.primesGenerator(j))
         j+=1
     np=md.numFactors(nt,p)
     long=len(p)

@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: project-euler-module
+Version: 0.1
+Summary: Este paquete contiene modulos para resolver problemas de Project Euler, hasta el problema 50
+Author: Enrique Rios Flores
+Author-email: enrq.rios.f@gmail.com

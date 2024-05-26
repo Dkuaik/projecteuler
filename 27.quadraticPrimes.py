@@ -12,7 +12,7 @@ maxPrimes=0
 for a in range(-999,1000):
     for b in range(-1000,1001):
         n=0
-        while md.esPrimo(abs(polyNom(n,a,b))):
+        while md.isPrime(abs(polyNom(n,a,b))):
             n+=1
         else:
             if n>maxPrimes:

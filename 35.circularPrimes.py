@@ -15,7 +15,7 @@ def rotate(n):
     return int(n[-1]+n[:-1])
 i=1
 while i<1000000:
-    if not md.esPrimo(i):
+    if not md.isPrime(i):
         i+=1
         continue
     if i in primoCircular:
@@ -25,7 +25,7 @@ while i<1000000:
     for j in range(len(str(i))):
         rotaciones.append(i_temp)
         i_temp=rotate(i_temp)
-    if all([md.esPrimo(x) for x in rotaciones]):
+    if all([md.isPrime(x) for x in rotaciones]):
         for x in rotaciones:
             primoCircular.add(x)
     # print(rotaciones)

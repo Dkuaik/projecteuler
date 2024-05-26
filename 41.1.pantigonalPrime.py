@@ -9,7 +9,7 @@ for i in range(1,10):
     for j in permutaciones:
         permutacion=list(map(str,j))
         permutacionNum=int(''.join(permutacion))
-        if md.esPrimo(permutacionNum):
+        if md.isPrime(permutacionNum):
             maxPP=permutacionNum
             # print(maxPP, " este es primo")
 print(maxPP)
