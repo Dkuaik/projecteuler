@@ -189,7 +189,7 @@ def nth_permutation(numbers, m):
     # Devuelve la m-ésima permutación
     return perms[m-1]
 # genera el n-simo numero pentagonal
-def nth_pentigonNumber(n:int) -> int:
+def nth_pentigonalNumber(n:int) -> int:
     return n*(3*n-1)/2
 
 # Evalua si un numero es pentagonal

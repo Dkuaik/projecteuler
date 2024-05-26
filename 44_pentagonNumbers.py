@@ -12,25 +12,30 @@
 
 #Importacion de modulo personalizado 
 
-from Modulos import isPentagonal,nth_pentigonNumber
+from Modulos import isPentagonal,nth_pentigonalNumber
+import itertools
 
 # Inicializacion de variables
-i=1
-diff=10000
-# recorrido sobre i,j,k
-diff_nmin=lambda i:3*i-2
-pentigonals=[1]
-while diff>=diff_nmin(i):
+i=0
+pentagonal_diff=0
+pentagonal_sum=0
+pentagonal_n=0
+pentagonal_m=0
+diff=0
+# El objetivo es encontrar la diferencia minima entre los numeros pentagonales
+# para ello se va a iterar sobre los numeros penagonales, este lo tomamos como la diferencia y calculamos los numeros restantes.
+# De esta manera paramos cuando encontremos el primer conjuntos de numeros que cumplan la regla.
+# sin perdida de generalidad supongamos que n>m
+
+while not(diff):
     i+=1
-    pentigonals.append(nth_pentigonNumber(i))
-    for pj in pentigonals[:-1]:
-        pi=nth_pentigonNumber(i)
-        # pj=nth_pentigon(j)
-        if isPentagonal(pi-pj) and isPentagonal(pi+pj):
-        # if isPentagonal(pi):
-            if pi-pj<diff:
-                diff=pj-pj
-                print(pi,pj,diff)
-                break
-    a=diff_nmin(i+1)
-print(diff)
+    pentagonal_sum=nth_pentigonalNumber(i)
+    for n in range(1,i):
+        pentagonal_n=nth_pentigonalNumber(n)
+        pentagonal_m=pentagonal_sum-pentagonal_n
+        pentagonal_diff=abs(pentagonal_n-pentagonal_m)
+        if isPentagonal(pentagonal_m) and isPentagonal(pentagonal_diff):
+            diff=pentagonal_diff
+            break
+print(diff)      
+
