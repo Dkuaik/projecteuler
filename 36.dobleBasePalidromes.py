@@ -6,6 +6,6 @@
 import Modulos as md
 palindromes=[]
 for i in range (1,1000000):
-    if md.isPalindrome(i) and md.isPalindrome(int(bin(i)[2:])):
+    if md.is_palindrome(i) and md.is_palindrome(int(bin(i)[2:])):
         palindromes.append([i,bin(i)[2:]])
 print(sum([i for i,j in palindromes]))

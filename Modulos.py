@@ -24,7 +24,7 @@ def isPandigital (n:str,first_digit:int,last_digit:int) -> bool:
 
 # Funcion para detectar palindromos
 
-def isPalindrome (n:str) -> bool:
+def is_palindrome (n:str) -> bool:
     n=str(n)
     for i in range (1,int(len(n)/2)+1):
         if n[i-1]!=n[-i]:
@@ -85,7 +85,7 @@ def isPhytagorean (a:int , b:int , c:int) -> bool:
        else:
              return False
 
-def factors (n: int):
+def factors (n: int) -> list:
     factors=list()
     if n==1:
         factors.append([1,1])
@@ -102,7 +102,7 @@ def factors (n: int):
             return factors 
 
 # fucni'on que descompone en primos con una lista de primos previamente calculada p
-def numFactors (n:int , p):
+def num_of_factors (n:int , p):
     np=[]
     for i in p:
         if(i>n):break
@@ -119,7 +119,7 @@ def numFactors (n:int , p):
     for i in np:
         num*=(i+1)
     return num
-
+print(num_of_factors(10,[2,3,5,7,11,13,17,23,29]))
 
 # funcion generadora de numeros triangulares
 

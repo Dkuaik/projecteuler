@@ -12,11 +12,11 @@ while np<500:
     np=1
     if (md.is_prime(nt)):
         continue
-    while (not (md.numFactors(nt,p))):
+    while (not (md.num_of_factors(nt,p))):
         # if (md.esPrimo(j)): p.append(j)
         p.append(md.primesGenerator(j))
         j+=1
-    np=md.numFactors(nt,p)
+    np=md.num_of_factors(nt,p)
     long=len(p)
 # print(p)
 print(f"El numero {nt} tiene {np} divisores el número de fueron necesarios es {long}")
