@@ -1,3 +1,9 @@
-from modules.primes import is_prime
+# import modules.primes as primes
 
-print(is_prime(4))
+def nums():
+    i=0
+    while True:
+        i+=1
+        yield i
+numeros=nums()        
+print(next(numeros))

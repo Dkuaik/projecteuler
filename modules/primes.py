@@ -16,7 +16,7 @@ def is_prime ( number:int ) -> bool:
     # Evalua los casos base y particulares
     if not isinstance(number,int):   raise ValueError("Only integers are allowed")
     if number<0:                     raise ValueError("Negative values are not allowed")
-    if number==0 in [0,1]:           return False
+    if number in [0,1]:           return False
     if number==2:                    return True
     if number%2==0:                  return False
     # Evalua los casos generales
@@ -37,11 +37,13 @@ def nextPrime (p) -> int:
             return n
         n+=2
 
-#funcion que genera el n-esimo primo 
-def primesGenerator (n: int) -> int: #mejorar algoritmo
-    i,j=1,1
-    while i<=n:
-        j+=1        # utilizar sentencia yield para trabajar con secuencias infinitas
-        if is_prime(j):
-            i+=1
-    return j
+# Esta funcion regresa un generador de numeros primos con cada next regresa el siguiente
+def primes_generator () -> iter: 
+    primes=[]
+    number=2 # Se pone la base del iterador
+    while True:
+        if all(number%prime!=0 for prime in primes):
+            primes.append(number)
+            yield number
+        number+=1
+
