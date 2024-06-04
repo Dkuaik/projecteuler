@@ -28,10 +28,11 @@ while not(ans):
         if pow: number_factors.append(prime_aux**pow)   
         if number_aux==1: break 
     factors.append(number_factors)
-    if len(factors)>=1000000:
+    if len(number_factors)==4 and len(factors[-2])==4 and len(factors[-3])==4 and len(factors[-4])==4:
         ans=1
     number+=1
 end=time.time()
-# print(factors)
+print(factors[-3:])
+print(len(factors)-3)
 print("Tiempo de ejecusion",end-begin)
 print(ans) #respuesta 134043
